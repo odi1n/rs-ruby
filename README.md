@@ -1,7 +1,5 @@
 <p align="center">
-    <a href="https://laravel.com" target="_blank">
-        <img src="https://ru.opensuse.org/images/a/a9/Ruby.png" width="75" height="75">
-    </a>
+    <img src="https://ru.opensuse.org/images/a/a9/Ruby.png" width="75" height="75">
 </p>
 
 
