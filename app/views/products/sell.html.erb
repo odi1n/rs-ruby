@@ -1,0 +1,39 @@
+<h3>Продать - <%= @product.name %></h3>
+
+<hr>
+<h4>Информация склада</h4>
+<div class="row">
+  <div class="col-4">
+    <p>Баланс: <strong><%= Stock.find(@product.stock_id).balance %>Р</strong></p>
+  </div>
+</div>
+<hr>
+<h4>Информация</h4>
+<div class="row">
+  <div class="col-4">
+    <p>Товар: <strong><%= @product.name %></strong></p>
+    <p>Количество: <strong><%= @product.count %></strong></p>
+    <p>Цена: <strong><%= @product.price %>Р</strong> за 1 шт.</p>
+  </div>
+</div>
+
+<hr>
+<div>
+  <%= form_for :product, url: stock_product_sell_path(@product.stock_id, @product) do |f| %>
+    <% if @product.errors.any? %>
+      <% @product.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger">
+          <%= msg %>
+        </div>
+      <% end %>
+    <% end %>
+    <p>
+      Продать кол-во
+      <br>
+      <%= f.number_field(:count, {:class => 'form-control'}) %>
+    </p>
+    <p>
+      <%= f.submit("Продать", {:class => 'btn btn-success', :style => 'width: 100%;'}) %>
+    </p>
+  <% end %>
+</div>

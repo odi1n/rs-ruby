@@ -1,24 +1,25 @@
-# README
+<p align="center">
+    <a href="https://laravel.com" target="_blank">
+        <img src="https://ru.opensuse.org/images/a/a9/Ruby.png" width="75" height="75">
+    </a>
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Тестовое задание - "Микросервис работы складов"
+<a href="http://railsinstaller.org/en">
+    <img alt="Ruby" src="https://img.shields.io/badge/ruby-2.3.3-blue?style=flat-square">
+    <img alt="gem" src="https://img.shields.io/badge/gem-3.2.15-red?style=flat-square">
+</a>
 
-* Ruby version
+<a href="https://rubygems.org/gems/rails/versions/5.2.5">
+    <img alt="Ruby" src="https://img.shields.io/badge/rails-5.2.5-green?style=flat-square">
+</a>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Установка/Запуск
+1. Скачать проект.
+2. Открыть папку через консоль: `cd ruby-tz-rsdigital`
+3. Запустить сервер: `rails server` или `rails s`
+4. Перейти по ссылке:
+    [127.0.0.1:3000](http://127.0.0.1:3000/),
+    [localhost:3000](http://localhost:3000/)
+    

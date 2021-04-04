@@ -1,0 +1,28 @@
+<h3>Добавление нового скалада</h3>
+<%= form_for :stock, url: stocks_path do |f| %>
+  <% if @stock.errors.any? %>
+    <% @stock.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger">
+        <%= msg %>
+      </div>
+    <% end %>
+  <% end %>
+  <p>
+    Название
+    <br>
+    <%= f.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Адрес
+    <br>
+    <%= f.text_field(:address, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Баланс склада
+    <br>
+    <%= f.number_field(:balance, {:class => 'form-control', :step => ".01"}) %>
+  </p>
+  <p>
+    <%= f.submit("Добавить",{:class => 'btn btn-success', :style => 'width: 100%;'}) %>
+  </p>
+<% end %>

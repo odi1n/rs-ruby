@@ -1,0 +1,16 @@
+<h3>Склады</h3>
+<%= link_to "Добавить новый склад", new_stock_path, :class => "btn-sm btn-primary" %>
+
+<hr>
+<div class="row">
+  <% @stocks.each do |stock| %>
+    <div class="col-4 pb-3">
+      <h3>Склад: <%= stock.name %></h3>
+      <p>Адрес: <strong><%= stock.address %></strong></p>
+      <p>Баланс: <strong><%= stock.balance %></strong></p>
+      <p>Товаров: <strong><%= stock.products.count %></strong></p>
+      <%= link_to "Просмотреть", stock_path(stock), :class => "btn-sm btn-success" %>
+      <%= link_to "Редактировать", edit_stock_path(stock), :class => "btn-sm btn-warning" %>
+    </div>
+  <% end %>
+</div>
