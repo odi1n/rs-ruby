@@ -3,11 +3,14 @@
 <div class="well">
   <p>Адресс: <strong><%= @stock.address %></strong></p>
   <p>Баланс: <strong><%= @stock.balance %></strong></p>
-  <%#= link_to "Читать далее", stock_path(stock), :class => "btn btn-default" %>
   <hr>
   <h4>Продукты</h4>
   <div class="row">
     <% @stock.products.each do |product| %>
+      <% if product.count == 0 %>
+        <% next %>
+      <% end %>
+
       <div class="col-4">
         <h5><strong><%= product.name %></strong></h5>
         <p>Количество: <strong><%= product.count %></strong></p>

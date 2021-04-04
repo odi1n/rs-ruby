@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stock: one
+  product: one
+  much_was: 1
+  much_was_left: 1
+  realized: 1
+  revenue: 9.99
+
+two:
+  stock: two
+  product: two
+  much_was: 1
+  much_was_left: 1
+  realized: 1
+  revenue: 9.99

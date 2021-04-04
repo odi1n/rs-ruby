@@ -56,6 +56,13 @@ class ProductsController < ApplicationController
             @stock.balance += count * @product.price
             @stock.save
 
+            Statistica.create(:stock_id => @product.stock_id,
+                              :product_id => @product.id,
+                              :much_was => @product.count,
+                              :much_was_left => @product.count - Integer(product_param[:count]),
+                              :realized => count,
+                              :revenue => count * @product.price)
+
             if product_check_count(product_param)
                 redirect_to Stock.find(params[:stock_id])
             else
@@ -68,13 +75,13 @@ class ProductsController < ApplicationController
 
     def product_check_count(product_param)
         product_count = @product.count - Integer(product_param[:count])
-        if product_count == 0
-            @product.destroy
-            return true
-        else
+        # if product_count == 0
+            # @product.destroy
+            # return true
+        # else
             @product.count = product_count
             @product.save
             return false
-        end
+        # end
     end
 end

@@ -1,0 +1,32 @@
+<h3>Статистика товаров</h3>
+<div class="pt-3">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Склад</th>
+      <th scope="col">Продукт</th>
+      <th scope="col">Было</th>
+      <th scope="col">Осталось</th>
+      <th scope="col">Реализовано</th>
+      <th scope="col">Прибыль</th>
+      <th scope="col">Добавлен</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% @statistics.each do |statistica| %>
+      <tr>
+        <th scope="row"><%= statistica.id %></th>
+        <td><%= statistica.stock.name %></td>
+        <td><%= statistica.product.name %></td>
+        <td><%= statistica.much_was %></td>
+        <td><%= statistica.much_was_left %></td>
+        <td><%= statistica.realized %></td>
+        <td><%= statistica.revenue %></td>
+        <td><%= statistica.created_at %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
